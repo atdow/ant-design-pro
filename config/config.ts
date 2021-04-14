@@ -1,3 +1,10 @@
+/*
+ * @Author: atdow
+ * @Date: 2021-04-14 11:31:07
+ * @LastEditors: null
+ * @LastEditTime: 2021-04-14 14:48:29
+ * @Description: file content
+ */
 // https://umijs.org/config/
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
@@ -28,9 +35,7 @@ export default defineConfig({
   targets: {
     ie: 11,
   },
-  // umi routes: https://umijs.org/docs/routing
   routes,
-  // Theme for antd: https://ant.design/docs/react/customize-theme-cn
   theme: {
     'primary-color': defaultSettings.primaryColor,
   },

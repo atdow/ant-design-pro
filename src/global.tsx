@@ -1,3 +1,10 @@
+/*
+ * @Author: atdow
+ * @Date: 2021-04-14 11:31:07
+ * @LastEditors: null
+ * @LastEditTime: 2021-04-14 16:13:30
+ * @Description: file content
+ */
 import { Button, message, notification } from 'antd';
 import { useIntl } from 'umi';
 import defaultSettings from '../config/defaultSettings';
@@ -82,3 +89,7 @@ if (pwa) {
     });
   }
 }
+
+// export function onRouteChange({ location, routes, action }) {
+//   console.log(99999);
+// }
