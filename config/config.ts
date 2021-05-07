@@ -2,10 +2,9 @@
  * @Author: atdow
  * @Date: 2021-04-14 11:31:07
  * @LastEditors: null
- * @LastEditTime: 2021-04-14 14:48:29
+ * @LastEditTime: 2021-05-07 11:33:59
  * @Description: file content
  */
-// https://umijs.org/config/
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
@@ -23,10 +22,8 @@ export default defineConfig({
     type: 'browser',
   },
   locale: {
-    // default zh-CN
     default: 'zh-CN',
     antd: true,
-    // default true, when it is true, will use `navigator.language` overwrite default
     baseNavigator: true,
   },
   dynamicImport: {
@@ -45,7 +42,6 @@ export default defineConfig({
   manifest: {
     basePath: '/',
   },
-  // 快速刷新功能 https://umijs.org/config#fastrefresh
   fastRefresh: {},
   esbuild: {},
 });

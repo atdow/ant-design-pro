@@ -1,8 +1,24 @@
+/*
+ * @Author: atdow
+ * @Date: 2021-04-14 11:31:07
+ * @LastEditors: null
+ * @LastEditTime: 2021-05-07 15:13:50
+ * @Description: file content
+ */
 import type { MenuDataItem } from '@ant-design/pro-layout';
-import { DefaultFooter, getMenuData, getPageTitle } from '@ant-design/pro-layout';
+import {
+  //  DefaultFooter,
+  getMenuData,
+  getPageTitle,
+} from '@ant-design/pro-layout';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import type { ConnectProps } from 'umi';
-import { Link, SelectLang, useIntl, connect, FormattedMessage } from 'umi';
+import {
+  Link,
+  // SelectLang,
+  useIntl,
+  connect,
+} from 'umi';
 import React from 'react';
 import type { ConnectState } from '@/models/connect';
 import logo from '../assets/logo.svg';
@@ -32,7 +48,13 @@ const UserLayout: React.FC<UserLayoutProps> = (props) => {
     formatMessage,
     breadcrumb,
     ...props,
+    title: '自定义',
   });
+  // console.log('title:', title);
+  // console.log('formatMessage:', formatMessage);
+  // console.log('breadcrumb:', breadcrumb);
+  // console.log('location.pathname:', location.pathname);
+  // console.log('props:', props);
   return (
     <HelmetProvider>
       <Helmet>
@@ -41,9 +63,9 @@ const UserLayout: React.FC<UserLayoutProps> = (props) => {
       </Helmet>
 
       <div className={styles.container}>
-        <div className={styles.lang}>
+        {/* <div className={styles.lang}>
           <SelectLang />
-        </div>
+        </div> */}
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.header}>
@@ -52,16 +74,10 @@ const UserLayout: React.FC<UserLayoutProps> = (props) => {
                 <span className={styles.title}>Ant Design</span>
               </Link>
             </div>
-            <div className={styles.desc}>
-              <FormattedMessage
-                id="pages.layouts.userLayout.title"
-                defaultMessage="Ant Design 是西湖区最具影响力的 Web 设计规范"
-              />
-            </div>
           </div>
           {children}
         </div>
-        <DefaultFooter />
+        {/* <DefaultFooter /> */}
       </div>
     </HelmetProvider>
   );

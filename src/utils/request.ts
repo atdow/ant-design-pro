@@ -1,4 +1,10 @@
-/** Request 网络请求工具 更详细的 api 文档: https://github.com/umijs/umi-request */
+/*
+ * @Author: atdow
+ * @Date: 2021-04-14 11:31:07
+ * @LastEditors: null
+ * @LastEditTime: 2021-05-07 13:45:42
+ * @Description: file content
+ */
 import { extend } from 'umi-request';
 import { notification } from 'antd';
 
